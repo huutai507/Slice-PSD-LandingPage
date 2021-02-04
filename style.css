@@ -31,12 +31,41 @@ body {
 }
 
 .container {
-  max-width: 1210px;
+  max-width: 1170px;
   padding-left: 2rem;
   padding-right: 2rem;
   margin: 0 auto;
 }
 
+.toggle-icon {
+  display: none;
+}
+
+.fa-bars {
+  font-size: 2rem;
+}
+
+.nav__input:checked ~ .header__nav-overlay {
+  display: block;
+}
+
+.nav__input:checked ~ .header__menu-mobile {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.nav__input {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .header {
   padding-top: 4rem;
 }
@@ -67,6 +96,48 @@ body {
 }
 .header__menu-link:hover {
   color: #ffc87a;
+}
+.header__menu-mobile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffc87a;
+  width: 25rem;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all linear 0.2s;
+  box-shadow: 0px 0px 35px -5px #ffc87a;
+}
+.header__menu-mobile-close {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  top: 0.5rem;
+  right: 2rem;
+}
+.header__menu-mobile-close .fas {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.header__menu-mobile-item {
+  margin-top: 2rem;
+  margin-left: 1rem;
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+.header__menu-mobile-link {
+  color: #1a2b5f;
+}
+.header__nav-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: none;
+  animation: fadeIn linear 0.2s;
 }
 
 .logo {
@@ -110,7 +181,7 @@ body {
   font-size: 1.6rem;
   text-align: center;
   color: #1a2b5f;
-  padding: 2rem 3rem;
+  padding: 0.8rem 2rem;
   display: inline-block;
   border: 0;
 }
@@ -278,6 +349,9 @@ body {
   width: calc(50% - 3rem);
   margin-bottom: 5rem;
 }
+.feature-best__desc {
+  font-size: 1.4rem;
+}
 
 .text-clamp {
   display: -webkit-box;
@@ -409,6 +483,14 @@ body {
   width: fit-content;
 }
 
+@media only screen and (min-width: 1366px) {
+  .header__menu-mobile {
+    display: none;
+  }
+  .header__nav-overlay {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
 @media only screen and (max-width: 1365px) {
   .banner {
     padding: 10rem 0;
@@ -422,6 +504,10 @@ body {
 
   .category__item img {
     height: 15rem;
+  }
+
+  .connect__item {
+    width: calc(23%);
   }
 }
 @media only screen and (max-width: 1023px) {
@@ -480,10 +566,51 @@ body {
   .feature-intro__item:last-child {
     margin-bottom: 2rem;
   }
+
+  .connect {
+    margin-bottom: 10rem;
+  }
+
+  .subscribe__container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .subscribe__title, .subscribe__info {
+    justify-content: center;
+    width: 100%;
+  }
+  .subscribe__title {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+  }
+  .subscribe__social {
+    text-align: center;
+  }
+  .subscribe__social .fab {
+    font-size: 3rem;
+    margin: 0 1rem;
+  }
 }
 @media only screen and (max-width: 767px) {
+  .header {
+    width: 100%;
+    height: 7rem;
+    padding-top: 0;
+    line-height: 7rem;
+    background-color: white;
+    position: fixed;
+    justify-content: space-between;
+    z-index: 3;
+  }
   .header__menu-list {
     display: none;
+  }
+  .header__menu .fas {
+    display: block;
+  }
+  .header__menu-mobile-list {
+    line-height: 3rem;
   }
 
   .banner {
@@ -521,6 +648,56 @@ body {
   .partner__item {
     margin-right: 2rem;
     margin-bottom: 2rem;
+  }
+
+  .connect__list {
+    flex-wrap: wrap;
+  }
+  .connect__item {
+    width: calc(50% - 1rem);
+    margin-bottom: 2rem;
+  }
+
+  .subscribe__title {
+    font-size: 2rem;
+  }
+
+  .footer__container {
+    flex-direction: column;
+  }
+  .footer__item {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .footer__item:first-child {
+    margin-bottom: 1rem;
+  }
+  .footer__link {
+    margin-right: 1rem;
+  }
+
+  .toggle-icon {
+    display: block;
+    cursor: pointer;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .subscribe__form {
+    display: flex;
+    flex-direction: column;
+  }
+  .subscribe__button {
+    margin-top: 1rem;
+    padding: 1rem;
+    color: white;
+    background-color: #ffc87a;
+    border-radius: 5px;
+  }
+
+  .feature__item:nth-child(even) .feature__info {
+    padding-right: 0rem;
   }
 }
 

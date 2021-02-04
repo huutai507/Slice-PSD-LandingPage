@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PSD to HTML</title>
+    <link
+      rel="icon"
+      href="https://cdn.dribbble.com/users/576253/screenshots/4288749/moonbank-mascot.png"
+    />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -45,15 +49,50 @@
               </li>
             </ul>
           </nav>
+
+          <label for="nav__mobile__input" class="toggle-icon"
+            ><i class="fas fa-bars"></i
+          ></label>
+
+          <input type="checkbox" class="nav__input" id="nav__mobile__input" />
+
+          <label for="nav__mobile__input" class="header__nav-overlay"></label>
+
+          <nav class="header__menu-mobile">
+            <label for="nav__mobile__input" class="header__menu-mobile-close">
+              <i class="fas fa-times"></i>
+            </label>
+            <ul class="header__menu-mobile-list">
+              <li class="header__menu-mobile-item">
+                <a href="#" class="header__menu-mobile-link"
+                  ><i class="far fa-bell"></i> Events</a
+                >
+              </li>
+              <li class="header__menu-mobile-item">
+                <a href="#" class="header__menu-mobile-link"
+                  ><i class="fas fa-hand-holding-usd"></i> Pricing</a
+                >
+              </li>
+              <li class="header__menu-mobile-item">
+                <a href="#" class="header__menu-mobile-link"
+                  ><i class="fas fa-book"></i> Blog</a
+                >
+              </li>
+              <li class="header__menu-mobile-item">
+                <a href="#" class="header__menu-link"
+                  ><i class="fas fa-sign-in-alt"></i> Login</a
+                >
+              </li>
+            </ul>
+          </nav>
         </div>
       </header>
       <section class="banner">
         <div class="container">
           <h1 class="banner__heading">The Kids playground</h1>
           <p class="banner__desc">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ut
-            sit ratione deserunt earum facilis sed laborum dolore quasi
-            perspiciatis?
+            The Playground, designed by nonprofit organization to be accessible
+            for all children
           </p>
           <div class="banner__buttons">
             <a href="" class="btn btn--border btn--rounded">Explore</a>
@@ -67,47 +106,31 @@
         <div class="container">
           <ul class="category__list">
             <li class="category__item">
-              <img
-                src="https://cdn.dribbble.com/users/6234/screenshots/14218430/media/10bdd017c24aca5d28f8d90fb20fd00c.png"
-                alt=""
-                class="category__image"
-              />
-              <h3 class="category__name">Sage rides</h3>
+              <img src="./img/img1.png" alt="" class="category__image" />
+              <h3 class="category__name">Sage Rides</h3>
+              <a href="" class="category__details">
+                CC Certfied<i class="fa fa-angle-right"></i>
+              </a>
+            </li>
+            <li class="category__item">
+              <img src="./img/img2.png" alt="" class="category__image" />
+              <h3 class="category__name">Delicious Foods</h3>
               <a href="" class="category__details">
                 Glutten Free <i class="fa fa-angle-right"></i>
               </a>
             </li>
             <li class="category__item">
-              <img
-                src="https://cdn.dribbble.com/users/6234/screenshots/14218430/media/10bdd017c24aca5d28f8d90fb20fd00c.png"
-                alt=""
-                class="category__image"
-              />
-              <h3 class="category__name">Sage rides as a sa</h3>
+              <img src="./img/img3.png" alt="" class="category__image" />
+              <h3 class="category__name">Entertainment</h3>
               <a href="" class="category__details">
-                Glutten Free <i class="fa fa-angle-right"></i>
+                Suitable for kids <i class="fa fa-angle-right"></i>
               </a>
             </li>
             <li class="category__item">
-              <img
-                src="https://cdn.dribbble.com/users/6234/screenshots/14218430/media/10bdd017c24aca5d28f8d90fb20fd00c.png"
-                alt=""
-                class="category__image"
-              />
-              <h3 class="category__name">Sage rides</h3>
+              <img src="./img/img4.png" alt="" class="category__image" />
+              <h3 class="category__name">Ice-Cream</h3>
               <a href="" class="category__details">
-                Glutten Free <i class="fa fa-angle-right"></i>
-              </a>
-            </li>
-            <li class="category__item">
-              <img
-                src="https://cdn.dribbble.com/users/6234/screenshots/14218430/media/10bdd017c24aca5d28f8d90fb20fd00c.png"
-                alt=""
-                class="category__image"
-              />
-              <h3 class="category__name">Sage rides</h3>
-              <a href="" class="category__details">
-                Glutten Free <i class="fa fa-angle-right"></i>
+                No Synthetic <i class="fa fa-angle-right"></i>
               </a>
             </li>
           </ul>
@@ -130,16 +153,14 @@
               </p>
               <ul class="feature-intro__list">
                 <li class="feature-intro__item">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos,
-                  error.
+                  The Playground has been designed to feature a first responders
+                  theme
                 </li>
                 <li class="feature-intro__item">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non,
-                  dolore.
+                  Full-inclusive playground offers rich experiences
                 </li>
                 <li class="feature-intro__item">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Iure, minus.
+                  The project is set to open Spring 2019
                 </li>
               </ul>
               <a href="" class="btn btn--primary btn--rounded">Visit now</a>
@@ -150,9 +171,7 @@
               <img src="./img/img6.png" alt="" />
             </div>
             <div class="feature__info">
-              <h3 class="feature__title">
-                The outdoor environment is age-appropriate to play
-              </h3>
+              <h3 class="feature__title">The best Aquapark for kids</h3>
               <p class="feature__desc">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
                 numquam culpa dolores quisquam eos eaque iste est, tempore iure.
@@ -160,27 +179,23 @@
               </p>
               <ul class="feature-intro__list">
                 <li class="feature-intro__item feature-intro__item--circle">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos,
-                  error.
+                  The Fire Truck with Free Food
                 </li>
                 <li class="feature-intro__item feature-intro__item--circle">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non,
-                  dolore.
+                  The Police Car with Costume
                 </li>
                 <li class="feature-intro__item feature-intro__item--circle">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Iure, minus.
+                  The Roller Coaster with Safety
                 </li>
               </ul>
-              <a href="" class="btn btn--primary btn--rounded">Visit now</a>
             </div>
           </div>
           <div class="feature__item">
             <div class="feature__image">
-              <img src="./img/img6.png" alt="" />
+              <img src="./img/img7.png" alt="" />
             </div>
             <div class="feature__info">
-              <h3 class="feature__title">The best Aquaback for kids</h3>
+              <h3 class="feature__title">Why we are the best</h3>
               <p class="feature__desc text-clamp text-clamp--2">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
                 numquam culpa dolores quisquam eos eaque iste est, tempore iure.
@@ -188,7 +203,7 @@
               </p>
               <ul class="feature-best__list">
                 <li class="feature-best__item">
-                  <i class="fa fa-home feature-best__icon"></i>
+                  <i class="fas fa-sitemap feature-best__icon"></i>
                   <h4 class="feature-best__title">
                     Non profitable organization
                   </h4>
@@ -199,10 +214,17 @@
                   </p>
                 </li>
                 <li class="feature-best__item">
-                  <i class="fa fa-home feature-best__icon"></i>
-                  <h4 class="feature-best__title">
-                    Non profitable organization
-                  </h4>
+                  <i class="fas fa-headset feature-best__icon"></i>
+                  <h4 class="feature-best__title">Customer Support</h4>
+                  <p class="feature-best__desc text-clamp text-clamp--2">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Eaque exercitationem amet reprehenderit blanditiis odit
+                    quisquam deserunt voluptatibus expedita. Esse, quae?
+                  </p>
+                </li>
+                <li class="feature-best__item">
+                  <i class="fas fa-user-shield feature-best__icon"></i>
+                  <h4 class="feature-best__title">High Safety & Security</h4>
                   <p class="feature-best__desc text-clamp text-clamp--2">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Eaque exercitationem amet reprehenderit blanditiis odit
@@ -212,18 +234,7 @@
                 <li class="feature-best__item">
                   <i class="fa fa-home feature-best__icon"></i>
                   <h4 class="feature-best__title">
-                    Non profitable organization
-                  </h4>
-                  <p class="feature-best__desc text-clamp text-clamp--2">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Eaque exercitationem amet reprehenderit blanditiis odit
-                    quisquam deserunt voluptatibus expedita. Esse, quae?
-                  </p>
-                </li>
-                <li class="feature-best__item">
-                  <i class="fa fa-home feature-best__icon"></i>
-                  <h4 class="feature-best__title">
-                    Non profitable organization
+                    Well Designed and decorated
                   </h4>
                   <p class="feature-best__desc text-clamp text-clamp--2">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -279,16 +290,16 @@
           </p>
           <ul class="connect__list">
             <li class="connect__item">
-              <img src="./img/img9.png" alt="" class="connect_image" />
+              <img src="./img/img8.png" alt="" class="connect_image" />
             </li>
             <li class="connect__item">
               <img src="./img/img9.png" alt="" class="connect_image" />
             </li>
             <li class="connect__item">
-              <img src="./img/img9.png" alt="" class="connect_image" />
+              <img src="./img/img10.png" alt="" class="connect_image" />
             </li>
             <li class="connect__item">
-              <img src="./img/img9.png" alt="" class="connect_image" />
+              <img src="./img/img11.png" alt="" class="connect_image" />
             </li>
           </ul>
         </div>
@@ -324,22 +335,22 @@
             </a>
           </div>
           <div class="footer__item">
-            <a href="#" class="footer__link"> Terms of services</a>
-            <a href="#" class="footer__link"> Terms of services</a>
-            <a href="#" class="footer__link"> Terms of services</a>
-            <a href="#" class="footer__link"> Terms of services</a>
+            <a href="#" class="footer__link"> Events for Kids</a>
+            <a href="#" class="footer__link"> Events for Parents</a>
+            <a href="#" class="footer__link"> Events for Guests</a>
+            <a href="#" class="footer__link"> Game & Gifts</a>
           </div>
           <div class="footer__item">
-            <a href="#" class="footer__link"> Terms of services</a>
-            <a href="#" class="footer__link"> Terms of services</a>
-            <a href="#" class="footer__link"> Terms of services</a>
-            <a href="#" class="footer__link"> Terms of services</a>
+            <a href="#" class="footer__link"> Events</a>
+            <a href="#" class="footer__link"> Who We Are</a>
+            <a href="#" class="footer__link"> Services</a>
+            <a href="#" class="footer__link"> Features</a>
           </div>
           <div class="footer__item">
-            <a href="#" class="footer__link"> Terms of services</a>
-            <a href="#" class="footer__link"> Terms of services</a>
-            <a href="#" class="footer__link"> Terms of services</a>
-            <a href="#" class="footer__link"> Terms of services</a>
+            <a href="#" class="footer__link"> Reviews</a>
+            <a href="#" class="footer__link"> Careers</a>
+            <a href="#" class="footer__link"> Press</a>
+            <a href="#" class="footer__link"> Help</a>
           </div>
         </div>
       </footer>

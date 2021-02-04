@@ -53,10 +53,40 @@ body {
 }
 
 .container {
-  max-width: 1210px;
+  max-width: 1170px;
   padding-left: 2rem;
   padding-right: 2rem;
   margin: 0 auto;
+}
+
+.toggle-icon {
+  display: none;
+}
+
+.fa-bars {
+  font-size: 2rem;
+}
+
+.nav__input:checked ~ .header__nav-overlay {
+  display: block;
+}
+
+.nav__input:checked ~ .header__menu-mobile {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.nav__input {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .header {
@@ -82,6 +112,49 @@ body {
         color: $primary-color;
       }
     }
+    &-mobile {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $primary-color;
+      width: 25rem;
+      transform: translateX(100%);
+      opacity: 0;
+      transition: all linear 0.2s;
+      box-shadow: 0px 0px 35px -5px #ffc87a;
+    }
+    &-mobile-close {
+      position: absolute;
+      width: 2rem;
+      height: 2rem;
+      top: 0.5rem;
+      right: 2rem;
+      .fas {
+        font-size: 2rem;
+        cursor: pointer;
+      }
+    }
+
+    &-mobile-item {
+      margin-top: 2rem;
+      margin-left: 1rem;
+      font-size: 1.8rem;
+      font-weight: 300;
+    }
+    &-mobile-link {
+      color: #1a2b5f;
+    }
+  }
+  &__nav-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: none;
+    animation: fadeIn linear 0.2s;
   }
 }
 
@@ -126,7 +199,7 @@ body {
   font-size: 1.6rem;
   text-align: center;
   color: $text-color;
-  padding: 2rem 3rem;
+  padding: 0.8rem 2rem;
   display: inline-block;
   border: 0;
   &--border {
@@ -294,6 +367,9 @@ body {
       width: calc(50% - 3rem);
       margin-bottom: 5rem;
     }
+    &__desc {
+      font-size: 1.4rem;
+    }
   }
 }
 
@@ -410,6 +486,18 @@ body {
     width: fit-content;
   }
 }
+@media only screen and (min-width: 1366px) {
+  .header {
+    &__menu {
+      &-mobile {
+        display: none;
+      }
+    }
+    &__nav-overlay {
+      background-color: rgba(0, 0, 0, 0);
+    }
+  }
+}
 
 // Responsive
 @media only screen and (max-width: 1365px) {
@@ -425,6 +513,11 @@ body {
   .category {
     &__item img {
       height: 15rem;
+    }
+  }
+  .connect {
+    &__item {
+      width: calc(23%);
     }
   }
 }
@@ -492,13 +585,55 @@ body {
       }
     }
   }
+  .connect {
+    margin-bottom: 10rem;
+  }
+  .subscribe {
+    &__container {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__title,
+    &__info {
+      justify-content: center;
+      width: 100%;
+    }
+    &__title {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 2.5rem;
+    }
+    &__social {
+      text-align: center;
+      .fab {
+        font-size: 3rem;
+        margin: 0 1rem;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 767px) {
   .header {
+    width: 100%;
+    height: 7rem;
+    padding-top: 0;
+    line-height: 7rem;
+    background-color: white;
+    position: fixed;
+    justify-content: space-between;
+    z-index: 3;
     &__menu {
       &-list {
         display: none;
+      }
+      .fas {
+        display: block;
+      }
+      &-mobile {
+        &-list {
+          line-height: 3rem;
+        }
       }
     }
   }
@@ -537,5 +672,59 @@ body {
       margin-right: 2rem;
       margin-bottom: 2rem;
     }
+  }
+  .connect {
+    &__list {
+      flex-wrap: wrap;
+    }
+    &__item {
+      width: calc(50% - 1rem);
+      margin-bottom: 2rem;
+    }
+  }
+  .subscribe {
+    &__title {
+      font-size: 2rem;
+    }
+  }
+  .footer {
+    &__container {
+      flex-direction: column;
+    }
+    &__item {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin: 0 auto;
+      &:first-child {
+        margin-bottom: 1rem;
+      }
+    }
+    &__link {
+      margin-right: 1rem;
+    }
+  }
+  .toggle-icon {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .subscribe {
+    &__form {
+      display: flex;
+      flex-direction: column;
+    }
+    &__button {
+      margin-top: 1rem;
+      padding: 1rem;
+      color: white;
+      background-color: $primary-color;
+      border-radius: 5px;
+    }
+  }
+  .feature__item:nth-child(even) .feature__info {
+    padding-right: 0rem;
   }
 }
